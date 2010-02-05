@@ -7,22 +7,22 @@ based on acts_as_tiny_url by Brendan G. Lim (brendangl@gmail.com)
 ActsAsBitlyURL utilizes Bit.ly's API to allow you to pass in any URL and 
 have it generate a shortened URL on the fly.
 
-By default you can use the __bitly_url__ method in all your controllers, views and models.
+By default you can use the +bitly_url()+ method in all your controllers, views and models.
 
 == Options
 
-The __validate_uri__ option allows you to check, before trying to retrieve a
+The +:validate_uri+ option allows you to check, before trying to retrieve a
 URL, whether or not it is formatted correctly.
 
 == Example Usage
 
-  tiny_url("http://google.com")			
+  bitly_url("http://google.com")			
   # returns http://bit.ly/da7vQs
 
-  tiny_url("http://brendanlim.com", :validate_uri => true)
+  bitly_url("http://brendanlim.com", :validate_uri => true)
   # returns true
 
-  tiny_url("http/brendanlim.com", :validate_uri => true)
+  bitly_url("http/brendanlim.com", :validate_uri => true)
   # returns false
 
 Copyright (c) 2008 Max Schulze (max@maxschulze.com), released under the MIT license
